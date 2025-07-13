@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Component Hello World Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+
+      .demo-container {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .hello-container {
+        padding: 15px 20px;
+        border: 2px solid red;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #f0f8ff, #e6f3ff);
+        font-family: "Arial", sans-serif;
+        text-align: center;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .example {
+        margin: 20px 0;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background: #fafafa;
+      }
+
+      .example h3 {
+        margin-top: 0;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo-container">
+      <h1>Web Component Hello World Demo</h1>
+
+      <div class="hello-container"></div>
+      <div class="example">
+        <h3>Basic Hello World Component</h3>
+        <hello-world></hello-world>
+      </div>
+
+      <div class="example">
+        <h3>Hello World with Custom Name</h3>
+        <hello-world name="Alice"></hello-world>
+      </div>
+
+      <div class="example">
+        <h3>Hello World with Custom Color</h3>
+        <hello-world name="Bob" color="blue"></hello-world>
+      </div>
+
+      <div class="example">
+        <h3>Multiple Components</h3>
+        <hello-world name="Charlie" color="green"></hello-world>
+        <hello-world name="Diana" color="purple"></hello-world>
+      </div>
+    </div>
+
+    <!-- Load the web component -->
+    <script src="hello-world-component.js"></script>
+  </body>
+</html>

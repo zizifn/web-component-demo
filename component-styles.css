@@ -1,0 +1,71 @@
+/* Shared styles for web components */
+:host {
+  display: inline-block;
+  margin: 10px;
+}
+
+.hello-container {
+  padding: 15px 20px;
+  border: 2px solid #007acc;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f0f8ff, #e6f3ff);
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.hello-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.3);
+}
+
+.greeting {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.wave {
+  font-size: 1.5em;
+  animation: wave 2s infinite;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+@keyframes wave {
+  0%,
+  50%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Theme variations */
+.theme-dark {
+  background: linear-gradient(135deg, #2d3748, #4a5568);
+  border-color: #63b3ed;
+  color: white;
+}
+
+.theme-success {
+  background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+  border-color: #48bb78;
+}
+
+.theme-warning {
+  background: linear-gradient(135deg, #fffaf0, #fbb6ce);
+  border-color: #ed8936;
+}
